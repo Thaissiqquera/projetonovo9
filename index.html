@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Marketing Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Dashboard Marketing</h1>
+      <nav class="tabs">
+        <button data-section="clustersSection" class="active">Clusters</button>
+        <button data-section="campanhasSection">Campanhas</button>
+        <button data-section="clvSection">CLV</button>
+        <button data-section="regressaoSection">Regressão</button>
+      </nav>
+    </header>
+    <section id="clustersSection" class="section active">
+      <div class="subsection">
+        <h2>Distribuição de Clusters</h2>
+        <canvas id="clusterChart"></canvas>
+      </div>
+      <div class="subsection">
+        <h2>Métricas Médias por Cluster</h2>
+        <canvas id="clusterDiagChart"></canvas>
+      </div>
+    </section>
+    <section id="campanhasSection" class="section">
+      <div class="subsection">
+        <h2>Desempenho por Campanha</h2>
+        <canvas id="campanhaChart"></canvas>
+      </div>
+      <div class="subsection suggestions">
+        <h2>Sugestões de Ação</h2>
+        <div id="suggestions" class="suggestions-container"></div>
+      </div>
+    </section>
+    <section id="clvSection" class="section">
+      <div class="subsection">
+        <h2>Segmentação de CLV</h2>
+        <canvas id="clvChart"></canvas>
+      </div>
+    </section>
+    <section id="regressaoSection" class="section">
+      <div class="subsection">
+        <h2>Coeficientes da Regressão Linear</h2>
+        <canvas id="regressionChart"></canvas>
+      </div>
+      <div class="subsection">
+        <h2>Tabela de Coeficientes</h2>
+        <table id="regressionTable">
+          <thead><tr><th>Variável</th><th>Coeficiente</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
